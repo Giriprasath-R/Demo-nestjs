@@ -28,7 +28,7 @@ export class userController{
         return "Hi "+createUserDto.name+". your document is updated";
     }
     @Delete(":id")
-    async delete(@Body() id:number){
+    async delete(@Param() id:number){
         const response = await this.userService.remove(id);
         return response;
     }
